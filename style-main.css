@@ -1,0 +1,425 @@
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+body {
+  margin: 0;
+}
+
+.due-text {
+  font-size: 0.8rem;
+  color: #eee;
+  padding-right: 0.5rem;
+}
+.due-date {
+  display: flex;
+  padding-top: 0.4rem;
+  justify-content: space-around;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(15, 23, 31, 0.7);
+  border-radius: 0.3rem;
+  width: 7.5rem;
+  height: 1.5rem;
+}
+.mir-ico {
+  margin-left: 0.3rem;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
+progress {
+  background-color: #f0f1f3 !important;
+  border: none;
+  width: 100%;
+  height: 0.54rem;
+  position: absolute;
+}
+progress::-webkit-progress-bar {
+  background-color: #f0f1f3;
+}
+progress::-webkit-progress-value {
+  color: #00e6c0;
+  background-color: #00e6c0;
+  box-shadow: none;
+}
+progress::-moz-progress-bar {
+  background-color: #00e6c0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+h1 {
+  font-size: 2rem;
+}
+p {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: #0f171f;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+.btn {
+  margin-left: 0.7rem;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  font-size: 0.8rem;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  letter-spacing: 0.02rem;
+}
+.btn-sort {
+  width: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.2rem;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+.btn-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-res {
+  width: 7rem;
+  padding: 0.5rem 0.1rem;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-prog {
+  width: 7rem;
+  padding: 0.5rem 0.1rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 6px 10px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 10px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 10px -5px rgba(0, 0, 0, 0.75);
+  color: #b8c0c7;
+}
+@media screen and (max-width: 700px) {
+  .search-cont,
+  .splash-text {
+    display: none;
+  }
+  .nav-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0px;
+    padding-left: 0px;
+    font-size: 0.8rem;
+    color: #b8c0c7;
+  }
+  .nav-item {
+    display: flex;
+  }
+  .badge {
+    width: 1.1rem;
+    margin-left: 0.5rem;
+    height: 1.1rem;
+    color: white;
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.8rem;
+    background-color: #b8c0c7;
+  }
+
+  .nav-top > li {
+    border-bottom: #007bff 0.4rem solid;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .search-cont,
+  .splash-text {
+    display: none !important;
+  }
+  .splash-content {
+    grid-column: 2/4;
+  }
+}
+.course:hover {
+  cursor: pointer;
+  margin-top: -1rem;
+  transition: 0.35s ease-in-out;
+}
+
+h1,
+h2,
+h3 {
+  text-align: left;
+  margin: 0;
+  padding: 1em 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
+}
+.search-cont {
+  padding: 2rem 0rem;
+}
+.search {
+  border: none;
+  font-size: small;
+  height: 2rem;
+  width: 17rem;
+  background-color: #f0f1f3;
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+.search-btn {
+  padding-top: 0.3rem;
+  color: #b8c0c7;
+  width: 2.5rem;
+  background-color: #f0f1f3;
+  height: 2.1rem;
+  border-radius: 1rem 0rem 0rem 1rem;
+  border: 1px solid #f0f1f3;
+}
+.splash {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 35rem)) 1fr;
+  height: 9.87rem;
+}
+
+.splash-content {
+  padding: 0rem 4rem;
+  box-shadow: 0px 16px 10px -15px rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000;
+  -webkit-box-shadow: 0px 16px 10px -15px rgba(0, 0, 0, 0.69);
+}
+
+.search-content {
+  display: flex;
+  align-items: center;
+  padding: 0rem 1rem;
+}
+.search-text {
+  padding-left: 1rem;
+  font-size: 0.8rem !important;
+}
+.sort {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #b8c0c7;
+}
+.sort-text {
+  padding-left: 0.5rem;
+}
+@media screen and (min-width: 600px) {
+  .splash-text p {
+    padding-top: 0;
+  }
+}
+
+/* cards section */
+.img-curve {
+  border-radius: 7px 7px 0px 0px;
+}
+.cards {
+  padding: 2em 1em 1em;
+}
+
+.cards ul {
+  margin: 0;
+  padding: 0;
+}
+
+.cards li {
+  margin-bottom: 1em;
+  background: white;
+  list-style-type: none;
+}
+.pos-rel {
+  position: relative;
+}
+.btn-nav {
+  margin-top: auto;
+}
+.card {
+  border-radius: 0px 0px 7px 7px;
+  border: 1px solid rgb(221, 221, 221);
+  padding: 1em 2.5em 1.5em 2.5em;
+  min-height: 14rem;
+  display: flex;
+  flex-direction: column;
+}
+.dis-none {
+  display: none;
+}
+.dis-flex {
+  display: flex;
+  align-items: center;
+}
+.dis-block {
+  display: block !important;
+}
+.card-main {
+  display: block;
+  background-color: white;
+  position: relative;
+}
+.card-main:hover {
+  border-radius: 0px 0px 7px 7px;
+  background-color: rgba(0, 0, 0, 0rem);
+  -webkit-box-shadow: 0px 6px 10px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 10px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 10px -5px rgba(0, 0, 0, 0.75);
+  transition: 0.35s ease-in-out;
+}
+
+@media screen and (min-width: 1000px) {
+  @supports (display: flex) {
+    .cards ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .cards li {
+      width: 31%;
+    }
+  }
+}
+
+.grid {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    .nav-top {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      list-style: none;
+      font-weight: bold;
+      margin: 0px;
+      padding-left: 0px;
+      font-size: 0.8rem;
+      color: #b8c0c7;
+    }
+    .nav-item {
+      display: flex;
+    }
+
+    .nav-link {
+      width: 7rem;
+      height: 2.5rem;
+      color: #b8c0c7;
+      text-decoration: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .badge {
+      display: flex;
+      justify-content: space-around;
+      margin-left: 0.5rem;
+      width: 1.4rem;
+      font-weight: 700;
+      padding-top: 0.2rem;
+      height: 1.2rem;
+      color: white;
+      border-radius: 0.3rem;
+      font-size: 0.7rem;
+      background-color: #b8c0c7;
+      margin-top: -0.1rem;
+    }
+    .active {
+      color: #0f171f;
+      border-bottom: #007bff 0.4rem solid !important;
+      transition: ease-in-out 0.5s;
+    }
+    .active .badge {
+      background-color: #007bff;
+    }
+    .nav-top > li {
+      border-bottom: #007bff 0.4rem solid;
+      padding-bottom: 1rem;
+      padding-left: 1rem;
+    }
+    .grid {
+      max-width: none;
+      /*margin: 0;*/
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 32rem)) 1fr;
+    }
+
+    /* Center items by placing them in the two center columns: */
+    .splash-content,
+    .search-content,
+    .cards ul {
+      grid-column: 2/4;
+    }
+  }
+}

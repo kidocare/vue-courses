@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basic Grid Demo</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style-main.css" type="text/css" media="all" />
+  </head>
+
+  <body class="site">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <main id="courses" class="main-area">
+      <section class="splash">
+        <div class="splash-content">
+          <h1 class="content-title">Your Courses</h1>
+          <div class="splash-text">
+            <ul class="nav-top">
+              <a class="nav-link active" href="#" @click="navover($event)">
+                <li class="nav-item">
+                  <span> To Do </span>
+                  <div class="badge">{{todo}}</div>
+                </li>
+              </a>
+              <a class="nav-link" href="#" @click="navover($event)">
+                <li class="nav-item">
+                  <span> In Progress </span>
+                  <div class="badge">{{inprogress}}</div>
+                </li>
+              </a>
+              <a class="nav-link" href="#" @click="navover($event)">
+                <li class="nav-item">
+                  <span> Compeleted </span>
+                  <div class="badge">{{compeleted}}</div>
+                </li>
+              </a>
+              <a class="nav-link" href="#" @click="navover($event)">
+                <li class="nav-item">
+                  <span> All Courses </span>
+                  <div class="badge">{{allcourses}}</div>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="search-cont grid">
+        <div class="search-content">
+          <button type="submit" class="search-btn">
+            <i class="material-icons md-18">search</i>
+          </button>
+          <input
+            class="search"
+            type="text"
+            placeholder="Search courses"
+            name="search2"
+          />
+          <p class="search-text">
+            <strong>23 &nbsp;</strong> of 98 courses match your search
+          </p>
+          <div class="sort dis-flex">
+            <i class="material-icons">sort</i>
+            <span class="sort-text">
+              Sort by
+            </span>
+
+            <a href="#" class="btn btn-sort">
+              <strong>Date enrolled</strong>
+              <i class="material-icons md-18">keyboard_arrow_down</i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="cards grid">
+        <ul>
+          <li
+            v-for="item in courses"
+            class="course"
+            @mouseenter="item.vprogress = true"
+            @mouseleave="item.vprogress = false"
+          >
+            <div class="card-main">
+              <div class="pos-rel">
+                <div class="due-date" v-if="item.due">
+                  <i class="material-icons mir-ico md-14">event</i>
+                  <span class="due-text">
+                    Due in
+                    <strong> {{item.duedate}} days </strong>
+                  </span>
+                </div>
+                <img class="img-curve" :src="item.image" :alt="item.alt" />
+                <progress id="file" :value="item.progress" max="100">
+                  {{item.progress}}
+                </progress>
+              </div>
+              <div class="card">
+                <h3 class="card-title">
+                  {{item.title}}
+                </h3>
+                <p class="dec">
+                  {{item.description}}
+                </p>
+                <div class="btn-nav">
+                  <div
+                    class="btn-txt"
+                    v-if="item.vprogress"
+                    :id="'progress'+ item.id"
+                  >
+                    <a href="#" class="btn btn-prog">View Progress</a>
+                  </div>
+                  <div class="btn-txt">
+                    <a href="#" class="btn btn-res">Resume</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
